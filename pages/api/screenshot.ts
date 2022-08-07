@@ -18,9 +18,9 @@ export default function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  console.log("req.query", req.query);
-  console.log("req.body", req.body);
-  console.log("req.headers", req.headers);
+  // console.log("req.query", req.query);
+  // console.log("req.body", req.body);
+  // console.log("req.headers", req.headers);
   // console.log("req.uid", req.uid);
 
   const userId = req.body.uid;
@@ -60,7 +60,18 @@ export default function handler(
       .upload(`public/${userId}/${uniqueImageId}.jpg`, buffer)
             // .upload('public/1.jpg', buffer);
 
-    console.log(data);
+
+    // insert data to supabase table images
+    // await supabase.from("images").insert({
+    //   created_at: new Date(),
+    //   href: uniqueImageId,
+    //   user_id: userId,
+    //   // user_email: ""
+    // });
+
+
+
+    // console.log(data);
 
     await page.close();
     await browser.close();
@@ -72,7 +83,7 @@ export default function handler(
   // .from('avatars')
   // .upload('public/avatar1.png', avatarFile)
 
+  res.redirect("/dashboard");
   res.status(200).json({ name: "Successful" });
 
-  res.redirect("/dashboard");
 }
