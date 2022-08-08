@@ -1,7 +1,8 @@
 /* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from 'react'
-import { Disclosure, Menu, Transition } from '@headlessui/react'
-import { BellIcon, ClipboardCopyIcon, MenuIcon, XIcon } from '@heroicons/react/outline'
+import { Fragment } from 'react';
+import { Disclosure, Menu, Transition } from '@headlessui/react';
+import { BellIcon, ClipboardCopyIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 import React, { MouseEventHandler, useEffect, useState } from 'react';
 
 import { User } from '@supabase/supabase-js';
@@ -327,48 +328,6 @@ const Dashboard = () => {
               <div className="bg-slate-50">
                 <div className="px-4 py-8 mx-auto max-w-7xl sm:px-6 lg:px-8">
                   <div className="grid grid-cols-1 gap-y-10 gap-x-6 sm:grid-cols-2 lg:grid-cols-4 xl:gap-x-8">
-                    {/* {imageData && imageData.map((image) => {} */}
-
-                    {/* {
-                      [1, 2, 3, 4, 5].map((i) => (
-                        <div
-                          className='flex flex-col px-4 py-4 space-y-5 bg-white shadow-md rounded-2xl'
-                          key={i}
-                        >
-                          <div
-                            className="relative h-56 overflow-hidden aspect-w-1 aspect-h-1 rounded-2xl"
-                          >
-                            <Image
-                              alt=""
-                              src="/screenshot.png"
-                              layout="fill"
-                              className="object-cover object-center w-full h-full lg:w-full lg:h-full"
-                            />
-                          </div>
-                          <div
-                            className='flex flex-col space-y-2'
-                          >
-                            <div className="relative mt-1 overflow-hidden border border-gray-300 rounded-md shadow-sm">
-                              <input
-                                type="url"
-                                readOnly
-                                value="http://localhost:3000/dashboard"
-                                className='w-full px-2 py-1 font-medium tracking-wide placeholder-gray-400 shadow-sm appearance-none flex-2 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-md'
-                              />
-                              <button className="absolute inset-y-0 right-0 flex items-center pl-2 pr-2 bg-white">
-                                <ClipboardCopyIcon className="w-5 h-5 text-gray-400" aria-hidden="true" />
-                              </button>
-                            </div>
-                            <div>
-                              <p
-                                className='text-sm text-gray-500'
-                              >Jan 20, 2022</p>
-                            </div>
-                          </div>
-                        </div>
-                      ))
-                    } */}
-
                     {imageData?.imagesData.map((image: any) => (
                       // console.log('image', image),
                       <div key={image.id} className='flex flex-col px-4 py-4 space-y-5 bg-white shadow-md rounded-2xl'>
@@ -396,6 +355,7 @@ export default Dashboard;
 
 const RenderImage: React.FC<any> = ({ userId, path }) => {
   const [publicUrl, setPublicUrl] = useState<any>("");
+
   useEffect(() => {
     (async () => {
       const { publicURL } = supabase.storage
@@ -446,9 +406,11 @@ const RenderImage: React.FC<any> = ({ userId, path }) => {
             value={publicUrl}
             className='w-full px-2 py-1 font-medium tracking-wide placeholder-gray-400 shadow-sm appearance-none flex-2 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-md'
           />
-          <button className="absolute inset-y-0 right-0 flex items-center pl-2 pr-2 bg-white">
-            <ClipboardCopyIcon className="w-5 h-5 text-gray-400" aria-hidden="true" />
-          </button>
+          <CopyToClipboard text={publicUrl}>
+            <button className="absolute inset-y-0 right-0 flex items-center pl-2 pr-2 bg-white">
+              <ClipboardCopyIcon className="w-5 h-5 text-gray-400" aria-hidden="true" />
+            </button>
+          </CopyToClipboard>
         </div>
         <div>
           <p
