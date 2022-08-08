@@ -182,13 +182,13 @@ const Dashboard = () => {
                   </div>
                   {/* <div className="flex items-center"></div> */}
                   <div className="hidden sm:ml-6 sm:flex sm:items-center">
-                    <button
+                    {/* <button
                       type="button"
                       className="p-1 text-gray-400 bg-white rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
                       <span className="sr-only">View notifications</span>
                       <BellIcon className="w-6 h-6" aria-hidden="true" />
-                    </button>
+                    </button> */}
 
                     {/* Profile dropdown */}
                     <Menu as="div" className="relative ml-3">
@@ -269,13 +269,13 @@ const Dashboard = () => {
                       {/* <div className="text-base font-medium text-gray-800">{user.name}</div> */}
                       <div className="text-sm font-medium text-gray-500">{user.email}</div>
                     </div>
-                    <button
+                    {/* <button
                       type="button"
                       className="flex-shrink-0 p-1 ml-auto text-gray-400 bg-white rounded-full hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                     >
                       <span className="sr-only">View notifications</span>
                       <BellIcon className="w-6 h-6" aria-hidden="true" />
-                    </button>
+                    </button> */}
                   </div>
                   <div className="mt-3 space-y-1">
                     {userNavigation.map((item) => (
