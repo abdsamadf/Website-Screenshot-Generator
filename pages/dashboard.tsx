@@ -19,9 +19,9 @@ const profileUser = {
 }
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
-  { name: 'Team', href: '#', current: false },
-  { name: 'Projects', href: '#', current: false },
-  { name: 'Calendar', href: '#', current: false },
+  // { name: 'Team', href: '#', current: false },
+  // { name: 'Projects', href: '#', current: false },
+  // { name: 'Calendar', href: '#', current: false },
 ]
 const userNavigation = [
   { name: 'Your Profile', href: '#' },
@@ -142,14 +142,24 @@ const Dashboard = () => {
                     <div className="flex items-center flex-shrink-0">
                       <img
                         className="block w-auto h-8 lg:hidden"
+                        src="/1.png"
+                        alt="Screenshot Generator"
+                      />
+                      {/* <img
+                        className="block w-auto h-8 lg:hidden"
                         src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
                         alt="Workflow"
-                      />
-                      <img
+                      /> */}
+                      {/* <img
                         className="hidden w-auto h-8 lg:block"
                         src="https://tailwindui.com/img/logos/workflow-logo-indigo-600-mark-gray-800-text.svg"
                         alt="Workflow"
-                      />
+                      /> */}
+                      {<img
+                        className="hidden w-auto h-8 lg:block"
+                        src="/1.png"
+                        alt="Screenshot Generator"
+                      />}
                     </div>
                     <div className="hidden sm:-my-px sm:ml-6 sm:flex sm:space-x-8">
                       {navigation.map((item) => (
@@ -413,9 +423,9 @@ const RenderImage: React.FC<any> = ({ userId, path }) => {
           </CopyToClipboard>
         </div>
         <div>
-          <p
+          {/* <p
             className='text-sm text-gray-500'
-          >Jan 20, 2022</p>
+          >Jan 20, 2022</p> */}
         </div>
       </div>
     </>
