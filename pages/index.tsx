@@ -11,6 +11,8 @@ import { useRouter } from 'next/router';
 import { supabase } from '../src/utils/SupabaseClient';
 import Image from 'next/image';
 
+import toast, { Toaster } from 'react-hot-toast';
+
 const profileUser = {
   name: 'Tom Cook',
   email: 'tom@example.com',
@@ -287,6 +289,27 @@ const Dashboard = () => {
                 </div>
               </div>
               {/* /End Dashboard Content */}
+              <Toaster
+                position="bottom-right"
+                toastOptions={{
+                  // Define default options
+                  className: '',
+                  duration: 2000,
+                  style: {
+                    background: '#363636',
+                    color: '#fff',
+                  },
+
+                  // Default options for specific types
+                  success: {
+                    duration: 1000,
+                    theme: {
+                      primary: 'green',
+                      secondary: 'black',
+                    },
+                  },
+                }}
+              />
             </div>
           </main>
         </div>
@@ -302,6 +325,8 @@ export default Dashboard;
 const RenderImage: React.FC<any> = ({ userId, path }) => {
   const [publicUrl, setPublicUrl] = useState<any>("");
   const [isLoading, setLoading] = useState<boolean>(true);
+
+  const copied = () => toast("Copied");
 
   useEffect(() => {
     (async () => {
@@ -343,7 +368,7 @@ const RenderImage: React.FC<any> = ({ userId, path }) => {
             className='w-full px-2 py-1 font-medium tracking-wide placeholder-gray-400 shadow-sm appearance-none flex-2 focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-md'
           />
           <CopyToClipboard text={publicUrl}>
-            <button className="absolute inset-y-0 right-0 flex items-center pl-2 pr-2 bg-white">
+            <button className="absolute inset-y-0 right-0 flex items-center pl-2 pr-2 bg-white" onClick={copied}>
               <ClipboardCopyIcon className="w-5 h-5 text-gray-400" aria-hidden="true" />
             </button>
           </CopyToClipboard>
