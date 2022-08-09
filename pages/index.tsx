@@ -249,7 +249,7 @@ const Dashboard = () => {
                     Welcome back, User!
                   </h2>
                   <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor vitae non itaque est?
+                      Programmatically generate screenshots of any website in seconds.
                   </p>
                 </div>
                 <div
