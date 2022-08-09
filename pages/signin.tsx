@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { useRouter } from 'next/router';
 
 import { supabase } from '../src/utils/SupabaseClient';
+import Link from 'next/link';
 
 const SignIn = () => {
   const router = useRouter();
@@ -35,9 +36,11 @@ const SignIn = () => {
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Sign in to your account</h2>
         <p className="mt-2 text-center text-sm text-gray-600">
           Or{' '}
-          <a href="/signup" className="font-medium text-indigo-600 hover:text-indigo-500">
-            register a new account
-          </a>
+          <Link href="/signup">
+            <a className="font-medium text-indigo-600 hover:text-indigo-500">
+              register a new account
+            </a>
+          </Link>
         </p>
       </div>
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
