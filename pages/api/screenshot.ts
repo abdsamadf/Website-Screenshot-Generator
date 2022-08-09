@@ -3,9 +3,8 @@ import type { NextApiRequest, NextApiResponse } from "next";
 import { supabase } from "../../src/utils/SupabaseClient";
 import { v4 as uuidv4 } from "uuid";
 // import { uuid } from 'uuidv4';
-// const puppeteer = require("puppeteer");
-// /* Importing the puppeteer library. */
-const puppeteer = require('puppeteer-core')
+const puppeteer = require("puppeteer");
+// const puppeteer = require('puppeteer-core')
 // import puppeteer from "puppeteer-core";
 // import * as puppeteer from 'puppeteer';
 // import chromium from "chrome-aws-lambda";
