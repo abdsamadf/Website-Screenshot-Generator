@@ -14,7 +14,6 @@ export default async function handler(
 
   const userId = req.body.userId;
 
-  // console.log("req.bod")
   console.log("userId dashboard", userId);
 
   async function getAllImages() {

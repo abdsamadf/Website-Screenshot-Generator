@@ -50,11 +50,10 @@ export default async function handler(
 
   }
 
-  // delay for 1 second
+  // delay for 1 second for save screenshot to supabase storage
   await new Promise((resolve) => setTimeout(resolve, 5000));
 
-
-  res.redirect("/dashboard");
+  res.redirect("/");
   res.status(200).json({ name: "Successful" });
 
 }
