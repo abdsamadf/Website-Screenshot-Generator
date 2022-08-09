@@ -15,17 +15,13 @@ const profileUser = {
   name: 'Tom Cook',
   email: 'tom@example.com',
   imageUrl:
-    'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80',
+    '/user.png',
 }
 const navigation = [
   { name: 'Dashboard', href: '#', current: true },
   // { name: 'Team', href: '#', current: false },
-  // { name: 'Projects', href: '#', current: false },
-  // { name: 'Calendar', href: '#', current: false },
 ]
 const userNavigation = [
-  { name: 'Your Profile', href: '#' },
-  { name: 'Settings', href: '#' },
   { name: 'Sign out', href: '/signout' },
 ]
 
@@ -109,10 +105,7 @@ const Dashboard = () => {
 
   useEffect(() => {
     if (user) {
-      // add onclick event to the sign out button
-      // userNavigation[2].onClick = handleLogOut;
       userNavigation.unshift({ name: `Welcome ${user.email}`, href: '#' });
-      // userNavigation.push({ name: 'Sign out', href: '#', onClick: handleLogOut });
     }
   }, [user]);
 
@@ -124,14 +117,6 @@ const Dashboard = () => {
 
   return (
     <>
-      {/*
-        This example requires updating your template:
-
-        ```
-        <html class="h-full">
-        <body class="h-full">
-        ```
-      */}
       <div className="min-h-full">
         <Disclosure as="nav" className="bg-white border-b border-gray-200">
           {({ open }) => (
@@ -365,6 +350,7 @@ export default Dashboard;
 
 const RenderImage: React.FC<any> = ({ userId, path }) => {
   const [publicUrl, setPublicUrl] = useState<any>("");
+  const [isLoading, setLoading] = useState<boolean>(true);
 
   useEffect(() => {
     (async () => {
@@ -403,7 +389,14 @@ const RenderImage: React.FC<any> = ({ userId, path }) => {
           alt=""
           src={publicUrl}
           layout="fill"
-          className="object-cover object-center w-full h-full lg:w-full lg:h-full"
+          // className="object-cover object-center w-full h-full lg:w-full lg:h-full"
+          className={classNames(
+            'duration-700 ease-in-out group-hover:opacity-75 object-cover object-center w-full h-full lg:w-full lg:h-full',
+            isLoading
+              ? 'scale-110 blur-2xl grayscale'
+              : 'scale-100 blur-0 grayscale-0'
+          )}
+          onLoadingComplete={() => setLoading(false)}
         />
       </div>
       <div
