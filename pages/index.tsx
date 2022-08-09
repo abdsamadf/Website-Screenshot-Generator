@@ -12,6 +12,7 @@ import { supabase } from '../src/utils/SupabaseClient';
 import Image from 'next/image';
 
 import toast, { Toaster } from 'react-hot-toast';
+import Link from 'next/link';
 
 const profileUser = {
   name: 'Tom Cook',
@@ -161,8 +162,9 @@ const Dashboard = () => {
                           {userNavigation.map((item) => (
                             <Menu.Item key={item.name}>
                               {({ active }) => (
+                                <Link href={item.href}>
                                 <a
-                                  href={item.href}
+                                  // href={item.href}
                                   className={classNames(
                                     active ? 'bg-gray-100' : '',
                                     'block px-4 py-2 text-sm text-gray-700'
@@ -170,6 +172,7 @@ const Dashboard = () => {
                                 >
                                   {item.name}
                                 </a>
+                                </Link>
                               )}
                             </Menu.Item>
                           ))}
