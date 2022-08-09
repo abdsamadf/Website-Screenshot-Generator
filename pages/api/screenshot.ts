@@ -11,17 +11,12 @@ type Data = {
   createdAt: Date;
   url: string;
   userId: string;
-  // path: string;
 };
 
-export default function handler(
+export default async function handler(
   req: NextApiRequest,
   res: NextApiResponse<Data>
 ) {
-  // console.log("req.query", req.query);
-  // console.log("req.body", req.body);
-  // console.log("req.headers", req.headers);
-  // console.log("req.uid", req.uid);
 
   const userId = req.body.uid;
   const url = req.body.url;
@@ -43,45 +38,21 @@ export default function handler(
     const page = await browser.newPage();
     await page.goto(url, { waitUntil: "networkidle2" });
 
-    // const buffer = await page.screenshot({
-    //   path: "./screenshot.png",
-    // });
     const buffer = await page.screenshot();
-
-    // const {data, error} = await supabase.storage
-    // .from("screenshot-bucket")
-    // .upload('public/1.png', decode(buffer), {
-    //   contentType: 'image/png'
-    // });
 
     // save buffer screenshot to supabase storage
     const { data, error } = await supabase.storage
       .from("screenshot-bucket")
       .upload(`public/${userId}/${uniqueImageId}.jpg`, buffer)
-            // .upload('public/1.jpg', buffer);
-
-
-    // insert data to supabase table images
-    // await supabase.from("images").insert({
-    //   created_at: new Date(),
-    //   href: uniqueImageId,
-    //   user_id: userId,
-    //   // user_email: ""
-    // });
-
-
-
-    // console.log(data);
 
     await page.close();
     await browser.close();
 
   }
 
-  // const avatarFile = event.target.files[0]
-  // const { data, error } = await supabase.storage
-  // .from('avatars')
-  // .upload('public/avatar1.png', avatarFile)
+  // delay for 1 second
+  await new Promise((resolve) => setTimeout(resolve, 5000));
+
 
   res.redirect("/dashboard");
   res.status(200).json({ name: "Successful" });
