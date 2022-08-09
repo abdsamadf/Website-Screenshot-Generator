@@ -1,9 +1,9 @@
 /* This example requires Tailwind CSS v2.0+ */
 import { Fragment } from 'react';
 import { Disclosure, Menu, Transition } from '@headlessui/react';
-import { BellIcon, ClipboardCopyIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
+import { ClipboardCopyIcon, MenuIcon, XIcon } from '@heroicons/react/outline';
 import { CopyToClipboard } from 'react-copy-to-clipboard';
-import React, { MouseEventHandler, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import { User } from '@supabase/supabase-js';
 import { useRouter } from 'next/router';
@@ -34,20 +34,6 @@ const Dashboard = () => {
   const [user, setUser] = useState<User | null>();
   const [imageData, setImageData] = useState<any>();
 
-  // const handleLogOut: MouseEventHandler = async (e) => {
-  //   e.stopPropagation();
-  //   e.nativeEvent.stopImmediatePropagation();
-  //   e.preventDefault();
-
-  //   const { error } = await supabase.auth.signOut();
-
-  //   if (error) {
-  //     alert(JSON.stringify(error));
-  //   } else {
-  //     router.push('/signin');
-  //   }
-  // };
-
   useEffect(() => {
     const getProfile = () => {
       const profile = supabase.auth.user();
@@ -55,7 +41,6 @@ const Dashboard = () => {
       if (profile) {
         setUser(profile);
 
-        // console.log("getProfile userId", user?.id);
       } else {
         router.push('/signin');
       }
@@ -72,9 +57,6 @@ const Dashboard = () => {
     const allScreenshot = () => {
       // fetch api for call all-screenshot api and pass the user id to the api
       // and get the response and set the response to the state
-
-      // console.log
-      // console.log('dashboard user id', user?.id);
 
       if (user) {
 
@@ -333,24 +315,6 @@ const RenderImage: React.FC<any> = ({ userId, path }) => {
 
   return (
     <>
-      {/* <Image
-    alt=""
-    src={publicUrl}
-    layout="fill"
-    className="object-cover object-center w-full h-full lg:w-full lg:h-full"
-  // objectFit="cover"
-  // width={200}
-  // height={200}
-
-  // className={cn(
-  //   'duration-700 ease-in-out group-hover:opacity-75',
-  //   isLoading
-  //     ? 'scale-110 blur-2xl grayscale'
-  //     : 'scale-100 blur-0 grayscale-0'
-  // )}
-  // onLoadingComplete={() => setLoading(false)}
-  /> */}
-
       <div
         className="relative h-56 overflow-hidden aspect-w-1 aspect-h-1 rounded-2xl"
       >
