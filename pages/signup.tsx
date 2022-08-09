@@ -28,21 +28,10 @@ const SignUp = () => {
       <div className="sm:mx-auto sm:w-full sm:max-w-md">
         <img
           className="mx-auto h-12 w-auto"
-          src="/1.png"
+          src="/logo.png"
           alt="Screenshot Generator"
         />
-        {/* <img
-            className="mx-auto h-12 w-auto"
-            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-            alt="Workflow"
-          /> */}
         <h2 className="mt-6 text-center text-3xl font-extrabold text-gray-900">Register your account</h2>
-        <p className="mt-2 text-center text-sm text-gray-600">
-          Or{' '}
-          <a href="#" className="font-medium text-indigo-600 hover:text-indigo-500">
-            start your 14-day free trial
-          </a>
-        </p>
       </div>
 
       <div className="mt-8 sm:mx-auto sm:w-full sm:max-w-md">
