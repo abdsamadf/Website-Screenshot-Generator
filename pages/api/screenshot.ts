@@ -8,9 +8,6 @@ const puppeteer = require("puppeteer");
 
 type Data = {
   name: string;
-  createdAt: Date;
-  url: string;
-  userId: string;
 };
 
 export default async function handler(
@@ -51,9 +48,9 @@ export default async function handler(
   }
 
   // delay for 1 second for save screenshot to supabase storage
-  await new Promise((resolve) => setTimeout(resolve, 5000));
+  await new Promise((resolve) => setTimeout(resolve, 6000));
 
   res.redirect("/");
-  res.status(200).json({ name: "Successful" });
+  // res.status(200).json({ name: "Successful" });
 
 }
