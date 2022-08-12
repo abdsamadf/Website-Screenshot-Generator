@@ -1,4 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Website Screenshot Generator - Screenzia
+
+![Logo](public/logo.png)
+
+In this project, web application will allow its users to get an programmatically automated screenshot of any website in seconds.
 
 ## Getting Started
 
@@ -18,14 +22,28 @@ You can start editing the page by modifying `pages/index.tsx`. The page auto-upd
 
 The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
 
-## Learn More
+## Project Problem
 
-To learn more about Next.js, take a look at the following resources:
+We need to get an automated screenshot of a website. Just paste the URL of the website in the input field and click the `Submit` button. The screenshot will be generated. The screenshot will be saved in the supabase storage. Each user folder will be named by the user's unique ID when they registered on the website. The screenshot will be saved in the user's Ids folder.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Project Motivation
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Learning latest technologies like Next.js, TypeScript, and React, TalwindCSS, RestAPIs is a great motivation for us to create this project. We want to make this project as easy as possible for users to use.
+
+## Project Goals
+
+* Create a web application that allows users to get an automated screenshot of a website in seconds.
+* Try to follow best practices for web applications.
+* Building custom users interfaces by using TalwindCSS Framework.
+* Using TypeScript because its a superset of typed JavaScript that can be used to write clean, readable, and efficient code with additional features like strong static typing and compilation.
+
+## Folder Structure
+
+/pages/api/ - API routes - This folder contains all code we need to access APIs for our application.
+/pages/ - React pages - This folder contains all React components that will be used in our application. Next.js will treat every component in this folder as a page.
+/public/ - Static assets - This folder contains all static assets that will be used in our application.
+/src/utils/ - Utility functions - This folder contains all utility functions that will be used in our application.
+/styles
 
 ## Deploy on Vercel
 
