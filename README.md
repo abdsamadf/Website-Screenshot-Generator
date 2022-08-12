@@ -59,6 +59,10 @@ Learning latest technologies like Next.js, TypeScript, and React, TalwindCSS, Re
   * /api/screenshot.ts - take screenshot using playwright and chrome-aws-lambda packages and save it into the supabase storage
   * /api/all-screenshot.ts - get all screenshot taken by a user from supabase storage bucket.
 * /pages/ - React pages - This folder contains all React components that will be used in our application. Next.js will treat every component in this folder as a page.
+  * /pages/ - this route uses default index.tsx file which is a dashboard file.
+  * /pages/signin - signin page
+  * /pages/signout - signout page
+  * /pages/signup - signup page
 * /public/ - Static assets - This folder contains all static assets that will be used in our application.
 * /src/utils/ - Utility functions - This folder contains all utility functions that will be used in our application.
 * /styles - Styles - This folder contains global styles that will be used in our application.
