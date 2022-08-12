@@ -21,6 +21,10 @@ In this project, web application will allow its users to get an programmatically
   - [Project Goals](#project-goals)
   - [Folder Structure](#folder-structure)
   - [Installation](#installation)
+  - [Screenshots](#screenshots)
+    - [Signup (localhost:3000/signup)](#signup-localhost3000signup)
+    - [Signin (localhost:3000/signin)](#signin-localhost3000signin)
+    - [Dashboard (localhost:3000/)](#dashboard-localhost3000)
   - [Tools/Technologies](#toolstechnologies)
   - [Contributors ✨](#contributors-)
   - [Deploy on Vercel](#deploy-on-vercel)
@@ -86,6 +90,17 @@ npm run dev
 # or
 yarn dev
 ```
+
+## Screenshots
+
+
+### Signup (localhost:3000/signup)
+![signup](public/ReadMe%20Assets/signup.png)
+
+### Signin (localhost:3000/signin)
+![signin](public/ReadMe%20Assets/signin.png)
+### Dashboard (localhost:3000/)
+![dashboard](public/ReadMe%20Assets/dashboard.png)
 
 ## Tools/Technologies
 1. **Next.js** - [https://nextjs.org/](https://nextjs.org/) - The React Framework for Production. Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
