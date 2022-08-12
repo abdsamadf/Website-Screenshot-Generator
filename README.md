@@ -118,8 +118,8 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 <!-- markdownlint-disable -->
 <table>
   <tr>
-    <td align="center"><a href="https://abdulmoiz.me"><img src="https://avatars3.githubusercontent.com/u/33980210?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abdul Moiz</b></sub></a><br /><a href="https://github.com/progrmoiz/Saiki/commits?author=progrmoiz" title="Code">💻</a> <a href="#ideas-progrmoiz" title="Ideas, Planning, & Feedback">🤔</a></td>
-    <td align="center"><a href="https://github.com/abdsamadf"><img src="https://avatars2.githubusercontent.com/u/44527855?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abdul Samad</b></sub></a><br /><a href="https://github.com/progrmoiz/Saiki/commits?author=abdsamadf" title="Code">💻</a> <a href="https://github.com/progrmoiz/Saiki/commits?author=abdsamadf" title="Documentation">📖</a></td>
+    <td align="center"><a href="https://abdulmoiz.me"><img src="https://avatars3.githubusercontent.com/u/33980210?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abdul Moiz</b></sub></a><br /><a href="#" title="Code">💻</a> <a href="#ideas-progrmoiz" title="Ideas, Planning, & Feedback">🤔</a></td>
+    <td align="center"><a href="https://github.com/abdsamadf"><img src="https://avatars2.githubusercontent.com/u/44527855?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Abdul Samad</b></sub></a><br /><a href="#" title="Code">💻</a> <a href="#" title="Documentation">📖</a></td>
     </tr>
 </table>
 
