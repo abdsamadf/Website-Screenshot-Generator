@@ -16,6 +16,7 @@ In this project, web application will allow its users to get an programmatically
 - [Website Screenshot Generator - Screenzia](#website-screenshot-generator---screenzia)
   - [Table of contents](#table-of-contents)
   - [Getting Started](#getting-started)
+  - [Demo Video](#demo-video)
   - [Project Problem](#project-problem)
   - [Project Motivation](#project-motivation)
   - [Project Goals](#project-goals)
@@ -43,6 +44,9 @@ yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+
+## Demo Video
+Check out the [demo video](https://www.loom.com/share/c165d6658def449caa8264b5392074f9) to see how the project works.
 
 ## Project Problem
 
@@ -77,7 +81,7 @@ Learning latest technologies like Next.js, TypeScript, and React, TalwindCSS, Re
 ## Installation
 To get this project up and running locally on your computer:
 
-1. Clone the repo by SSH  [SSH Repo](git@github.com:abdsamadf/Website-Screenshot-Generator.git)
+1. Clone the repo by SSH [SSH Repo](git@github.com:abdsamadf/Website-Screenshot-Generator.git)
  Or by [HTTPS Repo](https://github.com/abdsamadf/Website-Screenshot-Generator.git)
 2. Run `npm install` to install all packages.
 3. Create a supabase account for using DB and Storage for our application
