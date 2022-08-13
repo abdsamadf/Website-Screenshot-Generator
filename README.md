@@ -25,6 +25,8 @@ In this project, web application will allow its users to get an programmatically
     - [Signup (localhost:3000/signup)](#signup-localhost3000signup)
     - [Signin (localhost:3000/signin)](#signin-localhost3000signin)
     - [Dashboard (localhost:3000/)](#dashboard-localhost3000)
+    - [Supabase DB Auth](#supabase-db-auth)
+    - [Subabase Storage](#subabase-storage)
   - [Tools/Technologies](#toolstechnologies)
   - [Contributors ✨](#contributors-)
   - [Deploy on Vercel](#deploy-on-vercel)
@@ -102,6 +104,12 @@ yarn dev
 ### Dashboard (localhost:3000/)
 ![dashboard](public/ReadMe%20Assets/dashboard.png)
 
+### Supabase DB Auth
+![db-auth](public/ReadMe%20Assets/db-auth.png)
+
+### Subabase Storage
+![image-storage](public/ReadMe%20Assets/image-storage.png)
+
 ## Tools/Technologies
 1. **Next.js** - [https://nextjs.org/](https://nextjs.org/) - The React Framework for Production. Next.js gives you the best developer experience with all the features you need for production: hybrid static & server rendering, TypeScript support, smart bundling, route pre-fetching, and more. No config needed.
 2. **React** - A JavaScript library for building user interfaces
@@ -139,7 +147,6 @@ Thanks goes to these wonderful people ([emoji key](https://allcontributors.org/d
 
 This project follows the [all-contributors](https://allcontributors.org) specification.
 Contributions of any kind are welcome!
-
 
 ## Deploy on Vercel
 
